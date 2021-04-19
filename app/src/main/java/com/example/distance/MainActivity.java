@@ -126,9 +126,12 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     @Override
     public boolean onMapClick(@NonNull LatLng point) {
 
-        Point destinationPoint = Point.fromLngLat(point.getLongitude(), point.getLatitude());
-        Point originPoint = Point.fromLngLat(locationComponent.getLastKnownLocation().getLongitude(),
-                locationComponent.getLastKnownLocation().getLatitude());
+//        Point destinationPoint = Point.fromLngLat(point.getLongitude(), point.getLatitude());
+//        Point originPoint = Point.fromLngLat(locationComponent.getLastKnownLocation().getLongitude(),
+              //  locationComponent.getLastKnownLocation().getLatitude());
+        Point destinationPoint = Point.fromLngLat(78.48,17.385);
+        Point originPoint = Point.fromLngLat(78.33,18.32);
+
 
         GeoJsonSource source = mapboxMap.getStyle().getSourceAs("destination-source-id");
         if (source != null) {
